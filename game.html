@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- ===================================================== -->
+<!-- 🧠 HEAD START — COPY -->
+<!-- ===================================================== -->
+
+<meta charset="UTF-8">
+<title>2 Sounds Blending Game: Space Bug</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- ===================================================== -->
+<!-- 🧠 HEAD END -->
+<!-- ===================================================== -->
+
+</head>
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- 🟩 HEADER START — COPY -->
+<!-- ===================================================== -->
+
+<header>
+
+  <h1>2 Sounds Blending Game: Space Bug</h1>
+
+  <div class="button-row">
+
+    <button id="shuffleBtn">Shuffle</button>
+    <button id="prevWordBtn">← Previous</button>
+    <button id="nextWordBtn">Next →</button>
+    <button id="mainMenuBtn">Back to Main Menu</button>
+
+    <!-- 🎨 THEME (shape) -->
+    <select id="themeSelector" class="hdr-select" title="Shape theme">
+      <option value="heart" selected>💙 Hearts</option>
+      <option value="circle">🔵 Circles</option>
+      <option value="square">🟦 Squares</option>
+    </select>
+
+    <!-- 🎯 SCORING COLOUR (options filled by game.js) -->
+    <select id="colorSelector" class="hdr-select" title="Colour that scores"></select>
+
+  </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- 🟩 HEADER END -->
+<!-- ===================================================== -->
+
+
+
+<!-- ===================================================== -->
+<!-- 🟦 MAIN LAYOUT START — COPY -->
+<!-- ===================================================== -->
+
+<div id="game-container">
+
+
+<!-- ===================================================== -->
+<!-- ⭐ PHONICS ENGINE — PRE 2 (2-STEP SLIDER BLEND) -->
+<!-- ===================================================== -->
+
+<div id="left-panel">
+
+    <!-- ===================================================== -->
+    <!-- 🖼 PHONICS IMAGE -->
+    <!-- ===================================================== -->
+
+    <img id="image" src="zimages/zplaceholder.png" alt="word image">
+
+
+    <!-- ===================================================== -->
+    <!-- 🔤 PHONICS ROW 1 (STEP 1) -->
+    <!-- ===================================================== -->
+
+    <div class="letters-row spaced" id="row1"></div>
+
+
+    <!-- ===================================================== -->
+    <!-- 🔤 PHONICS ROW 2 (STEP 2) -->
+    <!-- ===================================================== -->
+
+    <div class="letters-row spaced" id="row2"></div>
+
+  </div>
+
+<!-- ===================================================== -->
+<!-- ⭐ END PHONICS ENGINE -->
+<!-- ===================================================== -->
+
+
+<!-- ===================================================== -->
+<!-- 🎮 GAME ENGINE START — PICK A CREATURE + SECRET NUMBER -->
+<!-- ===================================================== -->
+
+<div id="right-panel">
+
+  <!-- 📝 INSTRUCTION -->
+  <div id="instructionText"></div>
+
+  <!-- 🧮 SCOREBOARD -->
+  <div class="scoreboard">
+
+    <!-- 🐶 DOG TEAM (RED) -->
+    <div id="dogTeam" class="team dog active">
+      <span class="team-emoji">🐶</span>
+      <div id="dogPoints" class="goal"></div>
+    </div>
+
+    <!-- 🎰 SHAPE BOX — spins 💙 🔵 🟦 -->
+    <div id="rollBox" class="roll-box idle">
+      <div class="reel-window">
+        <div id="reelStrip" class="reel-strip">
+          <div class="reel-digit q">?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🐯 TIGER TEAM (BLUE) -->
+    <div id="tigerTeam" class="team tiger">
+      <span class="team-emoji">🐯</span>
+      <div id="tigerPoints" class="goal"></div>
+    </div>
+
+    <!-- 🛑 MODERATOR END GAME BUTTON -->
+    <button id="endGameBtn" title="End the game now">END<br>GAME</button>
+
+  </div>
+
+  <!-- 🌊 GAME AREA -->
+  <div id="game-area" class="locked">
+
+    <!-- 🟩 TILE GRID (BACKGROUND) -->
+    <div id="forestGrid"></div>
+
+    <!-- 🐾 FLOATING ANIMAL LAYER -->
+    <div id="animalLayer"></div>
+  </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- 🎮 GAME ENGINE END -->
+<!-- ===================================================== -->
+
+
+</div>
+
+<!-- ===================================================== -->
+<!-- 🟦 MAIN LAYOUT END -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!-- 📜 SCRIPT START — COPY -->
+<!-- ===================================================== -->
+
+<script src="game.js"></script>
+
+<!-- ===================================================== -->
+<!-- 📜 SCRIPT END -->
+<!-- ===================================================== -->
+
+
+</body>
+</html>
